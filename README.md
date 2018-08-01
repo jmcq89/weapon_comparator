@@ -37,6 +37,13 @@ To run unit tests change dirs to ~/weapon_comparator/weapon_comparator/ and run:
 $    python -m unittest discover -vvv
 ```
 
+# Usage 
+
+To see some example useage look in:
+```
+    weapon_comparator/bin/workbook.py
+```
+
 # To do:
 
 * Define some weapon profiles
@@ -62,3 +69,5 @@ $    python -m unittest discover -vvv
 * Get optimal weapon for target
     * Input: wielder, target, [weapons to choose from], conditions/modifiers
     * Return the weapon with the highest expected damage against the target. If no weapons input then do all valid weapons for wielder split by ranged/melee/overall 
+
+* Create an tutorial either raw script or ipython notebook or both. 
