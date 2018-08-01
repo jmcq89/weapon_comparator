@@ -1,6 +1,6 @@
 # Weapon Comparator
 
-This is a tool for Warhammer 40k Kill Teams.
+This is a tool for Warhammer 40K Kill Teams.
 
 It is designed to answer questions like:
 
