@@ -29,6 +29,14 @@ Clone the directory to your local workspace, change dirs to ~/weapon_comparator/
 $    pip install .
 ```
 
+# Testing
+
+To run unit tests change dirs to ~/weapon_comparator/weapon_comparator/ and run:
+
+```
+$    python -m unittest discover -vvv
+```
+
 # To do:
 
 * Define some weapon profiles
@@ -54,12 +62,3 @@ $    pip install .
 * Get optimal weapon for target
     * Input: wielder, target, [weapons to choose from], conditions/modifiers
     * Return the weapon with the highest expected damage against the target. If no weapons input then do all valid weapons for wielder split by ranged/melee/overall 
-
-# Testing
-
-To run unit tests change dirs to ~/weapon_comparator/weapon_comparator/ and run:
-
-```
-$    python -m unittest discover -vvv
-```
-
