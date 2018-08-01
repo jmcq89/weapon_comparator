@@ -1,5 +1,5 @@
 '''
-modules for warhammer math
+Module for warhammer math
 '''
 import math 
 

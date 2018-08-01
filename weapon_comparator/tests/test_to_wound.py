@@ -64,4 +64,4 @@ class TestToHit(unittest.TestCase):
                 assert compute_to_wound_probability(strength, toughness) == prob
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

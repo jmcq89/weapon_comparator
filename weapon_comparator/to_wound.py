@@ -1,7 +1,6 @@
 '''
 Module for computing to wound probability
 '''
-from warhammer_math import round_up
 
 def compute_to_wound_probability(strength, toughness):
     '''
