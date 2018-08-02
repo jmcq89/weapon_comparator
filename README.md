@@ -12,7 +12,8 @@ or
 
 or 
 
-"What is the expected number of unsaved wounds for a Nemesis Falchion across all Toughness/Armor pairs?"
+"What is the expected number of unsaved wounds for a Nemesis Falchion across all 
+ Toughness/Armor pairs?"
 
 We plan on incorporating conditions like:
 
@@ -23,7 +24,7 @@ We plan on incorporating conditions like:
 
 # Installing
 
-Clone the directory to your local workspace, change dirs to ~/weapon_comparator/ and install with: 
+Clone the directory to your local workspace, change dirs to `~/weapon_comparator/` and install with: 
 
 ```
 $    pip install .
@@ -31,23 +32,25 @@ $    pip install .
 
 # Testing
 
-To run unit tests change dirs to ~/weapon_comparator/weapon_comparator/ and run:
+To run unit tests change dirs to `~/weapon_comparator/weapon_comparator/` and run:
 
 ```
 $    python -m unittest discover -vvv
 ```
 
+or if you have the `pytest` package:
+
+```
+$    python -m pytest
+```
+
 # Usage 
 
-To see some example useage look in:
-```
-    weapon_comparator/bin/workbook.py
-```
+To see some example useage look in: `weapon_comparator/bin/workbook.py`
 
 # To do:
 
-* Define some weapon profiles
-    - Added effects for things like rail rifles? Gauss ? etc.
+* Add all weapon profiles
 
 * Build a weapon comparison tool 
     * for the given weapons compute the array for expected unsaved wounds and expected damage
@@ -57,6 +60,8 @@ To see some example useage look in:
 * Define some units
     * Can be used to generate a weighted average
         * or to select the best weapon versus this foe
+
+* compute probability of knocking out
 
 * Evaluate weapon:
     * Input: weapon, wielder, target, conditions/modifiers
@@ -68,6 +73,7 @@ To see some example useage look in:
 
 * Get optimal weapon for target
     * Input: wielder, target, [weapons to choose from], conditions/modifiers
-    * Return the weapon with the highest expected damage against the target. If no weapons input then do all valid weapons for wielder split by ranged/melee/overall 
+    * Return the weapon with the highest expected damage against the target. 
+      If no weapons input then do all valid weapons for wielder split by ranged/melee/overall 
 
 * Create an tutorial either raw script or ipython notebook or both. 
