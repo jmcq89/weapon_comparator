@@ -15,11 +15,32 @@ KT_TO_HIT_DICTIONARY = {
     '10+' : 1.0/6.0
 }
 
+def compute_distance_penalty(current_to_hit, penalty):
+    save = int(current_to_hit.strip('+'))
+    next_to_hit = save + penalty
+    if next_to_hit > 10:
+        next_to_hit = 10
+    if next_to_hit < 0:
+        next_to_hit = 10
+    return str(next_to_hit) + '+'
+
+
 class TestToHit(unittest.TestCase):
 
     def test_kill_team_to_hits(self):
         for skill, prob in KT_TO_HIT_DICTIONARY.iteritems():
             assert compute_to_hit_probability(skill) == prob
+
+    def test_auto_hit(self):
+        assert compute_to_hit_probability('0+', auto_hit=True) == 1.0 
+
+    def test_distance_penalty(self):
+        for skill, prob in KT_TO_HIT_DICTIONARY.iteritems():
+            penalized_skill = compute_distance_penalty(skill, 1)
+            assert compute_to_hit_probability(skill, 
+                                              distance_penalty=True) ==\
+                                               KT_TO_HIT_DICTIONARY[penalized_skill]
+
 
 if __name__ == '__main__':
     unittest.main()

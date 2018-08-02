@@ -1,7 +1,18 @@
 '''
 Module to store ranged weapons
 '''
-from weapons.base_weapon_class import Weapon
+from base_weapon_class import Weapon
+
+RANGED_WEAPON_TYPE_TO_ATTACKS_MAP = {
+    'Rapid Fire 1' : (1, 2), 
+    'Rapid Fire 2' : (2, 4),
+    'Assault D6'   : (3.5, 3.5),
+    'Heavy 6'      : (6, 6),
+    'Heavy 4'      : (4, 4),
+    'Grenade D6'   : (3.5, 3.5),
+    'Grenade D3'   : (2, 2),
+    'Grenade 1'    : (1, 1)
+}
 
 class RangedWeapon(Weapon):
     ''' base weapon class for ranged weapons'''

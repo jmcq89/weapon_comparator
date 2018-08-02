@@ -1,7 +1,7 @@
 '''
 Module to store melee weapons
 '''
-from weapons.base_weapon_class import Weapon
+from base_weapon_class import Weapon
 
 class MeleeWeapon(Weapon):
     ''' base weapon class for ranged weapons'''

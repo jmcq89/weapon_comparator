@@ -11,9 +11,9 @@ ARMOR_SAVES = {
 }
 TEST_AP = [0, -1, -2, -3, -4]
 
-def compute_save_difference(current_save, difference):
+def compute_save_difference(current_save, penetration):
     save = int(current_save.strip('+'))
-    next_save = save - difference
+    next_save = save - penetration
     if next_save > 7:
         next_save = 7
     if next_save < 2:

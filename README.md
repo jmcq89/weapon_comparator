@@ -50,18 +50,21 @@ To see some example useage look in: `weapon_comparator/bin/workbook.py`
 
 # To do:
 
-* Build a weapon comparison tool 
-    * for the given weapons compute the array for expected unsaved wounds and expected damage
-    * give the best weapon for each S/T and some summaries
-    * give the rankings for each S/T
-
 * Add all weapon profiles
 
-* Define some units
-    * Can be used to generate a weighted average
-        * or to select the best weapon versus this foe
+* Implement weapon modifiers in weapon_comparison / to_wound / to_hit / to_penetrate_armor
 
-* compute probability of knocking out
+* Implement penalties in weapon_comparison / to_wound / to_hit / to_penetrate_armor
+
+* Implement buffs in weapon_comparison / to_wound / to_hit / to_penetrate_armor
+
+* Implement tactics in weapon_comparison / to_wound / to_hit / to_penetrate_armor
+
+* Define Kill Teams units
+    * Can be used to generate a weighted average
+    * Can be used to select the best weapon versus this foe
+
+* Compute probability of knocking out of action
 
 * Evaluate weapon:
     * Input: weapon, wielder, target, conditions/modifiers
