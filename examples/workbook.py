@@ -1,6 +1,5 @@
 from weapon_comparator.compute_unsaved_wound_probability import\
-    compute_unsaved_wound_toughness_armor_array
-
+     compute_unsaved_wound_toughness_armor_array
 
 def main():
     skill = '4+'
@@ -12,7 +11,6 @@ def main():
         print 'to wound probabilities (for one attack) by armor save:'
         print array[toughness]
         print ''
-
 
 if __name__ == '__main__':
     main()
