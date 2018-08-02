@@ -8,7 +8,7 @@ from ranged_weapons import RangedWeapon, AutoHitWeapon, MortalWoundWeapon
 DaemonHammer = UnwieldyWeapon(name='grey_knights_daemon_hammer',
                               strength=8, armor_penetration=-3, damage=3, to_hit_penalty=-1)
 Falchions = BonusAttackMeleeWeapon(name='grey_knights_falchions',
-                                   strength=5, armor_penetration=-2, damage='D3', bonus_attacks=1)
+                                   strength=4, armor_penetration=-2, damage='D3', bonus_attacks=1)
 ForceHalberd = MeleeWeapon(name='grey_knights_force_halberd',
                           strength=5, armor_penetration=-2, damage='D3')
 ForceSword = MeleeWeapon(name='grey_knights_force_sword',

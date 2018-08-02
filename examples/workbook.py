@@ -1,6 +1,7 @@
 from weapon_comparator.compare_weapons import compare_weapons_across_all_toughess_armor
-from weapon_comparator.weapons.grey_knights import Psilencer, Psycannon, Incinerator
-from weapon_comparator.compute_unsaved_wound_probability import ALL_TOUGHNESS, ALL_ARMORS
+from weapon_comparator.weapons.grey_knights import (Psilencer, Psycannon, Incinerator, StormBolter,
+                                                    ForceHalberd, ForceSword, WardingStave, 
+                                                    Falchions, DaemonHammer)
 
 def print_sorted_armor_string(dictionary):
     sorted_keys = sorted(dictionary)
@@ -12,25 +13,27 @@ def print_sorted_armor_string(dictionary):
 
 def main():
     skill = '4+'
-    weapons = [Psycannon, Psilencer]
+    weapons = [ForceHalberd, ForceSword, WardingStave, Falchions, DaemonHammer]
+    #weapons = [Psycannon, Psilencer, StormBolter]
     results = compare_weapons_across_all_toughess_armor(weapons, [skill])
+
+    wounds = False
+    if wounds:
+        array = 'array_wound_ranks'
+    else:
+        array = 'array_damage_ranks'
 
     print '\n'
     print 'comparing: {weapons}'.format(weapons=', '.join([weapon.name for weapon in weapons]))
     print '\n'
-    print 'Best Weapon by wounds:'
+    if wounds:
+        print 'All Ranks by Expected Number of Wounds:'
+    else:
+        print 'All Ranks by Expected Number of Damage:'
     for toughness in range(2,6):
-        print 'Toughness: {toughness}'.format(toughness=toughness)
-        del results['array_wound_best'][toughness]['2+']
-        print print_sorted_armor_string(results['array_wound_best'][toughness])
-    print '\n'
-    print '------------\n'
-    print 'Best Weapon by Damage:'
-    for toughness in range(2,6):
-        print 'Toughness: {toughness}'.format(toughness=toughness)
-        del results['array_damage_best'][toughness]['2+']
-        print print_sorted_armor_string(results['array_damage_best'][toughness])
-    print '\n'
+        print 'Toughness: {T}    \n'.format(T=toughness)
+        for armorsave in ['3+', '4+', '5+', '6+', '7+']:
+                print "* " + armorsave + "  " + results[array][toughness][armorsave] + "    "
 
 if __name__ == '__main__':
     main()
